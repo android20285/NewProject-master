@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 所有UI页面使用的背景色 #EDEDED -->
+    <color name="activity_ui_bg">#EDEDED</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="base_dialog_bg">#ab000000</color>
+    <color name="white">#ffffff</color>
+    <!--半透明颜色-->
+    <color name="red">#dd403b</color>
+    <color name="color_main_tab_top_line">#d9d9d9</color>
+    <!-- 淡黑色 -->
+    <color name="main_tab_text_unchecked">#808080</color>
+    <color name="grass_green">#00b234</color>
+    <color name="dodger_blue">#1E90FF</color>
+    <color name="circle_comment_name_color">#576B95</color>
+    <color name="navigationBarColor">@android:color/black</color>
+    <color name="windowBackground">@android:color/white</color>
+</resources>

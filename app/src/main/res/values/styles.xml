@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">48dp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 程序数据加载loading样式 -->
+    <style name="loading_progress_small" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/base_progress_round_small</item>
+        <item name="android:minWidth">39dp</item>
+        <item name="android:maxWidth">39dp</item>
+        <item name="android:minHeight">39dp</item>
+        <item name="android:maxHeight">39dp</item>
+    </style>
+
+    <!-- 宽度充满 -->
+    <style name="match_width">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 高度充满 -->
+    <style name="match_height">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 包裹内容 -->
+    <style name="wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 充满 -->
+    <style name="match_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 程序主HomeFragmentTabActivity界面，界面切换 Radio按钮样式 -->
+    <style name="main_tabs_radiobtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+        <item name="android:paddingTop">0dip</item>
+        <item name="android:paddingBottom">3dip</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@drawable/color_text_main_rb</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- WebView加载数据时，进度条样式 -->
+    <style name="ProgressWebViewScrollbarStyle">
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fadingEdgeLength">0px</item>
+    </style>
+    <!-- 新用户注册界面，用户协议按钮样式 -->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox" />
+
+    <!-- 应用程序启动界面样式 -->
+    <style name="AppSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

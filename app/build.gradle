@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.cn.good.foodingredients"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+configurations {
+    all*.exclude module: 'classworlds'
+    all*.exclude module: 'commons-logging'
+    all*.exclude module: 'httpclient'
+    all*.exclude module: 'maven-artifact'
+    all*.exclude module: 'maven-artifact-manager'
+    all*.exclude module: 'maven-error-diagnostics'
+    all*.exclude module: 'maven-model'
+    all*.exclude module: 'maven-project'
+    all*.exclude module: 'maven-settings'
+    all*.exclude module: 'plexus-container-default'
+    all*.exclude module: 'plexus-interpolation'
+    all*.exclude module: 'plexus-utils'
+    all*.exclude module: 'wagon-file'
+    all*.exclude module: 'wagon-http-lightweight'
+    all*.exclude module: 'wagon-provider-api'
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.1.1'
+//    compile 'com.google.android:multidex:0.1'
+    testCompile 'junit:junit:4.12'
+    /**nohttp网络请求*/
+    compile 'com.yolanda.nohttp:nohttp:+'
+    /**alibaba:fastjson Json格式数据解析*/
+    compile 'com.alibaba:fastjson:+'
+    /**glide图片下载及缓存处理*/
+    compile 'com.github.bumptech.glide:glide:+'
+    /**数据库GreenDao数据库*/
+    compile 'org.greenrobot:greendao:+'
+    /**数据库GreenDao数据库*/
+    compile 'org.greenrobot:greendao-generator:+'
+    /**数据库GreenDao数据库版本更新*/
+    compile 'com.github.yuweiguocn:greendaoupgradehelper:+'
+    /**启动相机或相册选取照片*/
+    /**compile 'com.jph.takephoto:takephoto_library:+'*/
+    /**启动相机或相册选取照片*/
+    compile 'com.yanzhenjie:album:+'
+    /**改变手机状态栏主题颜色*/
+    compile 'com.readystatesoftware.systembartint:systembartint:+'
+    /**广告图片轮播*/
+    compile 'com.jude:rollviewpager:+'
+    /**滑动关闭Activity界面*/
+    compile 'me.imid.swipebacklayout.lib:library:+'
+
+    /**统计图，如 柱状图，饼图，曲线图等等*/
+    //compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+
+    /**开发类似于微信，QQ等及时通讯群聊用户图像图片显示框架*/
+    //compile 'com.szysky.customize:simageview:2.2';
+
+    /**https://github.cohui10086/ShareUtil
+     ShareUtil是一个综合性的分享及登录工具库， 支持微信分享，微博分享，QQ分享，QQ空间分享以及Android系统默认分享，
+     支持微信登录，微博登录以及QQ登录并获取用户信息。免第三方Jar包配置 */
+    //compile 'me.shaohui:shareutil:1.3.4'
+    /**手动添加第三方jar*/
+    //compile 'me.shaohui:shareutil:1.3.4.no_jar'
+
+}

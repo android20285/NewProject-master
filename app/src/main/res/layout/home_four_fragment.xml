@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        style="@style/match_parent"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/logout_layout"
+            style="@style/match_width"
+            android:background="@null"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/wrap_content"
+                android:layout_margin="20dp"
+                android:text="注销登录"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/activity_ui_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

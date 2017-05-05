@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/titel_layout"
+        layout="@layout/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ScrollView
+        style="@style/match_width"
+        android:layout_below="@id/titel_layout"
+        android:layout_centerHorizontal="true"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:scrollbars="none"
+        android:scrollingCache="false">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titel_layout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="64dip"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/moblie_no_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/login_radius_edit_view_selector"
+                android:drawableLeft="@mipmap/phone_number_icon"
+                android:drawablePadding="10dp"
+                android:hint="@string/login_prompt_name_empty"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="10dp"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moblie_no_edittext"
+                android:layout_marginTop="20dip"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/verifiction_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:layout_weight="2"
+                    android:background="@drawable/login_left_radius_edit_view_selector"
+                    android:hint="@string/please_input_verifiction_code"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/get_verifiction_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="4"
+                    android:background="@drawable/button_right_radius_selector"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/password_one_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_radius_edit_view_selector"
+                    android:drawableLeft="@mipmap/lock_icon"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/register_account_pwd_tip"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/password_two_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_radius_edit_view_selector"
+                    android:drawableLeft="@mipmap/lock_icon"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/register_account_confirm_pwd_tip"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_registerprotocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="40dip"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/checkbox_style"
+                    android:drawablePadding="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_register_protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:text="@string/register_account_checkbox_tip"
+                    android:textColor="@color/circle_comment_name_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_registerprotocol"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dip"
+                android:background="@drawable/login_button_selector"
+                android:gravity="center"
+                android:paddingBottom="13dp"
+                android:paddingTop="13dp"
+                android:text="@string/register_account_ok"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

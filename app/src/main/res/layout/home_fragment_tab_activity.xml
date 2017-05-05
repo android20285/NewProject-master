@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titel_layout"
+        layout="@layout/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_main_tab_top_line" />
+
+        <RadioGroup
+            android:id="@+id/mnc_rg"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mnc_rbnt_one"
+                style="@style/main_tabs_radiobtn"
+                android:background="@drawable/home_fragment_tab_bg_one_selector"
+                android:text="@string/tab_tag_one" />
+
+            <RadioButton
+                android:id="@+id/mnc_rbnt_two"
+                style="@style/main_tabs_radiobtn"
+                android:background="@drawable/home_fragment_tab_bg_two_selector"
+                android:text="@string/tab_tag_two" />
+
+            <RadioButton
+                android:id="@+id/mnc_rbnt_three"
+                style="@style/main_tabs_radiobtn"
+                android:background="@drawable/home_fragment_tab_bg_three_selector"
+                android:text="@string/tab_tag_three" />
+
+            <RadioButton
+                android:id="@+id/mnc_rbnt_four"
+                style="@style/main_tabs_radiobtn"
+                android:background="@drawable/home_fragment_tab_bg_four_selector"
+                android:text="@string/tab_tag_four" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
